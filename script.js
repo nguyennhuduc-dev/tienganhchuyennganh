@@ -255,7 +255,7 @@ function render(){
   $("tfQuestions").innerHTML=e.tf.map((q,i)=>'<div class="tf-row"><b>'+(i+1)+'. '+q[0]+'</b><div class="inline-options"><label><input type="radio" name="tf'+i+'" value="true"> True</label><label><input type="radio" name="tf'+i+'" value="false"> False</label></div></div>').join("");
   $("readingPassage").innerHTML=passageHTML(e.readingPassage);
   $("readingQuestions").innerHTML=e.reading.map((q,i)=>'<div class="question"><div class="question-title">'+(i+1)+'. '+q[0]+'</div><input class="answer-input" type="text" id="read'+i+'" placeholder="Write your answer in English"></div>').join("");
-  $("result").classList.add("hidden");$("examForm").reset();answeredCount();window.scrollTo({top:0,behavior:"smooth"});
+  $("result").classList.add("hidden");$("examForm").reset();answeredCount();requestAnimationFrame(()=>{const top=document.querySelector(".hero");if(top){top.scrollIntoView({behavior:"smooth",block:"start"});}window.scrollTo({top:0,left:0,behavior:"smooth"});document.documentElement.scrollTop=0;document.body.scrollTop=0;});
 }
 function answeredCount(){
   let n=0;for(let i=0;i<20;i++)if(document.querySelector('input[name="mc'+i+'"]:checked'))n++;
