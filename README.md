@@ -8,15 +8,15 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="Language: English">
   <img src="https://img.shields.io/badge/Units-8-success?style=for-the-badge" alt="8 Units">
-  <img src="https://img.shields.io/badge/Exams-4-blueviolet?style=for-the-badge" alt="4 exams">
-  <img src="https://img.shields.io/badge/Questions-200-orange?style=for-the-badge" alt="200 questions in total">
+  <img src="https://img.shields.io/badge/Exams-7-blueviolet?style=for-the-badge" alt="4 exams">
+  <img src="https://img.shields.io/badge/Questions-350-orange?style=for-the-badge" alt="200 questions in total">
 </p>
 
 ---
 
 ## 📘 Giới thiệu
 
-Website hỗ trợ học và ôn tập tiếng Anh chuyên ngành Công nghệ thông tin. Dự án hiện có **4 đề thi thử độc lập**, mỗi đề gồm 50 câu hỏi được biên soạn theo các chủ đề trong 8 Unit.
+Website hỗ trợ học và ôn tập tiếng Anh chuyên ngành Công nghệ thông tin. Dự án hiện có **7 đề thi thử độc lập**, mỗi đề gồm 50 câu hỏi được biên soạn theo các chủ đề trong 8 Unit.
 
 🌐 **Truy cập website:** [https://nguyennhuduc-dev.github.io/tienganhchuyennganh/](https://nguyennhuduc-dev.github.io/tienganhchuyennganh/)
 
@@ -39,7 +39,10 @@ Website hỗ trợ học và ôn tập tiếng Anh chuyên ngành Công nghệ t
 | Đề 2 | IT jobs, computer systems và websites | 50 |
 | Đề 3 | Databases, e-commerce và network systems | 50 |
 | Đề 4 | IT support, IT security và kiến thức tổng hợp | 50 |
-| **Tổng cộng** | **4 đề độc lập** | **200** |
+| Đề 5 | Tổng hợp đủ 8 Unit | 50 |
+| Đề 6 | Tổng hợp đủ 8 Unit | 50 |
+| Đề 7 | Tổng hợp đủ 8 Unit | 50 |
+| **Tổng cộng** | **7 đề độc lập** | **350** |
 
 Mỗi đề có cùng cấu trúc 5 phần:
 
@@ -54,7 +57,7 @@ Mỗi đề có cùng cấu trúc 5 phần:
 
 ## ✨ Tính năng
 
-- Chọn đề thi từ danh sách 4 đề.
+- Chọn đề thi từ danh sách 7 đề.
 - Bộ câu hỏi và đoạn đọc riêng cho từng đề.
 - Bao quát từ vựng và kiến thức của 8 Unit.
 - Hiển thị tiến độ làm bài.
