@@ -24,7 +24,7 @@
       <h2>📝 Chọn đề thi</h2>
       <p class="hint">Mỗi đề có bộ câu hỏi và đoạn đọc riêng, cùng cấu trúc 50 câu. Chuyển đề sẽ bắt đầu một lượt làm bài mới.</p>
       <label class="exam-picker-label" for="examSelect">Đề muốn làm</label>
-      <select id="examSelect" class="exam-select">
+      <select id="examSelect" class="exam-select" onchange="changeExam(this.value)">
         <option value="0">Đề 1 – Kiến thức tổng hợp</option>
         <option value="1">Đề 2 – IT jobs, computer systems & websites</option>
         <option value="2">Đề 3 – Databases, e-commerce & networks</option>
@@ -33,6 +33,7 @@
         <option value="5">Đề 6 – Tổng hợp 8 Unit</option>
         <option value="6">Đề 7 – Tổng hợp 8 Unit</option>
       </select>
+      <p id="currentExamTitle" class="hint" aria-live="polite">Bạn đang làm: Đề 1</p>
       <div class="progress-wrap"><div class="progress-label"><span>Tiến độ trả lời</span><strong id="progressText">0/50</strong></div><div class="progress"><div id="progressBar"></div></div></div>
     </section>
     <form id="examForm">
@@ -46,6 +47,6 @@
     <section id="result" class="card result hidden" aria-live="polite"><h2>Kết quả bài thi</h2><div class="score" id="score"></div><p id="scoreMessage"></p><div id="answerReview"></div></section>
     <footer>Đề luyện tập tự biên soạn theo 8 chủ đề tiếng Anh chuyên ngành CNTT. Không phải đề thi chính thức.</footer>
   </main>
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
