@@ -1,4 +1,4 @@
-// English for IT — 4 independent practice exams, 50 questions each.
+// English for IT — 7 independent practice exams, 50 questions each.
 const makeExam = (mc, terms, defs, match, words, fills, tfPassage, tf, readingPassage, reading) =>
   ({mc,terms,defs,match,words,fills,tfPassage,tf,readingPassage,reading});
 
