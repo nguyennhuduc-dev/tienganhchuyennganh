@@ -167,7 +167,109 @@ function grade(){
   e.mc.forEach((q,i)=>{const a=document.querySelector('input[name="mc'+i+'"]:checked'),ok=!!a&&+a.value===q[2];if(ok)score++;review.push('<div class="review-item">'+(i+1)+'. Trắc nghiệm — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+ABCD[q[2]]+'. '+q[1][q[2]]+'</div>');});
   e.terms.forEach((term,i)=>{const ok=$("match"+i).value===e.match[i];if(ok)score++;review.push('<div class="review-item">Nối '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+e.match[i]+'.</div>');});
   e.words.forEach((word,i)=>{const ok=$("fill"+i).value===word;if(ok)score++;review.push('<div class="review-item">Điền từ '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+word+'.</div>');});
-  e.tf.forEach((q,i)=>{const a=document.querySelector('input[name="tf'+i+'"]:checked'),ok=!!a&&(a.value==="true")===q[1];if(ok)score++;review.push('<div class="review-item">True/False '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+(q[1]?'True':'False')+'.</div>');});
+  e.tf.forEach((q,i)=>{const a=document.querySelector('input[name="tf'+i+'"]:checked'),ok=!!a&&(a.value==="true")===q[1
+,
+makeExam(
+[
+["Who coordinates an IT project?",["Project manager","Technician","Customer","Browser"],0],
+["What does a database administrator maintain?",["Database security and performance","Office furniture","Product adverts","Power cables"],0],
+["Which component executes instructions?",["CPU","Monitor","Keyboard","Printer"],0],
+["Which storage keeps data without power?",["SSD","RAM","Cache","Register"],0],
+["What does an operating system manage?",["Hardware and software resources","Only web colors","Online orders only","Email addresses"],0],
+["Which language structures web pages?",["HTML","CSS","SQL","DHCP"],0],
+["What is CSS used for?",["Styling web pages","Querying tables","Routing packets","Scanning malware"],0],
+["What is a homepage?",["A website's main page","A database key","A network cable","A payment method"],0],
+["Which key uniquely identifies a row?",["Primary key","Foreign key","Shortcut key","Function key"],0],
+["Which SQL command adds a record?",["INSERT","SELECT","UPDATE","DELETE"],0],
+["What is data validation?",["Checking input against rules","Deleting all records","Changing screen size","Connecting a router"],0],
+["What does a shopping cart hold?",["Selected products","System files","IP addresses","Support tickets"],0],
+["Why do customers read product reviews?",["To make informed decisions","To replace checkout","To encrypt data","To assign IPs"],0],
+["What does a modem connect?",["A network to an internet service","A page to CSS","Two database rows","A keyboard to a screen"],0],
+["Which network covers a large geographical area?",["WAN","PAN","USB","Single-device LAN"],0],
+["What is packet switching?",["Sending data in small units","Printing web pages","Formatting a disk","Styling a page"],0],
+["What is a good first troubleshooting step?",["Gather details about symptoms","Replace every device","Delete user files","Disable security"],0],
+["What is remote support?",["Technical help delivered over a network","Repairing furniture","Buying a domain","Creating a table"],0],
+["What does a software patch provide?",["A fix or security improvement","A new keyboard","A network cable","A shopping discount"],0],
+["Which action protects an unattended computer?",["Lock the screen","Share the password","Disable updates","Use unknown USB drives"],0]
+],
+["Project manager","Operating system","HTML","CSS","Primary key","INSERT","Shopping cart","WAN","Remote support","Patch"],
+["A software fix or security improvement","A person who coordinates project work","A network covering a large geographical area","Main software managing computer resources","A language for structuring web content","A language for styling page appearance","A unique identifier for a database row","An SQL command that adds records","Technical assistance delivered over a network","A place to keep selected products before payment"],
+["B","D","E","F","G","H","J","C","I","A"],
+["administrator","processor","validation","homepage","foreign key","checkout","modem","packet","troubleshooting","patch"],
+["A database _____ maintains data access and performance.","The CPU is the computer's main _____.","Input _____ checks whether data follows required rules.","The _____ is usually the first page visitors see.","A _____ links a record to a related table.","Customers review an order at _____.","A _____ connects a local network to an internet service.","A data _____ is a small unit sent across a network.","_____ starts by identifying symptoms and gathering information.","A security _____ can fix a software weakness."],
+{title:"An IT Upgrade",paragraphs:["A project manager coordinates an IT upgrade. The team replaces old storage with SSDs and updates the operating system. A database administrator checks access permissions and performance.","The company launches a website. HTML structures its pages and CSS styles them. A database stores product records, and a primary key identifies each record. Customers add products to a shopping cart and complete checkout online.","A modem connects the office network to the internet. A WAN links distant branches. Support staff provide remote support, investigate symptoms and install patches to improve security."]},
+[["A project manager coordinates the IT upgrade.",true],["CSS is used to query database tables.",false],["A primary key identifies a database record.",true],["A shopping cart holds products before checkout.",true],["Remote support always requires the technician to be in the same room.",false]],
+{title:"Connecting Branch Offices",paragraphs:["A company has offices in two cities. A wide area network connects the branches. Routers forward packets so employees can access shared services.","The company website uses HTML and CSS. Customers place orders through a shopping cart. The system validates customer input before saving order details. SQL INSERT adds a new order, and a primary key identifies it.","When an employee has a problem, the help desk gathers symptoms and may provide remote support. Administrators install patches and remind workers to lock their screens."]},
+[["What connects the offices in different cities?",["wide area network","wan"]],["What do routers forward?",["packets"]],["What does the system do before saving input?",["validates","validation"]],["Which SQL command adds an order?",["insert"]],["What should workers do when leaving their desks?",["lock their screens","lock the screen"]]]
+),
+makeExam(
+[
+["Who plans the high-level structure of a software solution?",["Software architect","Customer","Printer operator","Help desk caller"],0],
+["Why is teamwork important in IT?",["Projects need different skills","It removes planning","It prevents every error","It replaces technical knowledge"],0],
+["Which device enters text?",["Keyboard","Monitor","Speaker","Projector"],0],
+["What is firmware?",["Software embedded in hardware","A page color","A SQL query","An online payment"],0],
+["What does virtualization allow?",["Virtual machines to run on physical hardware","A monitor to become a router","An OS to be removed","All websites to go offline"],0],
+["Which HTML tag displays an image?",["img","table","title","footer"],0],
+["What is a URL?",["An address of an online resource","A processor","A database row","A wireless password"],0],
+["Why is web accessibility important?",["It helps people with different abilities use a site","It limits sites to developers","It removes navigation","It disables images"],0],
+["What is a database field?",["A column describing an attribute","A whole network","A packet","A computer fan"],0],
+["What does SQL UPDATE do?",["Changes existing records","Creates a domain","Routes packets","Formats a disk"],0],
+["Why normalize a relational database?",["Reduce unnecessary duplication","Increase repeated data","Remove all keys","Speed up a monitor"],0],
+["What does B2C mean?",["Business to consumer","Browser to computer","Backup to cloud","Byte to character"],0],
+["What does payment confirmation tell a buyer?",["The payment was approved or completed","The router restarted","The site was deleted","The database is offline"],0],
+["Which protocol automatically assigns IP settings?",["DHCP","HTML","SQL","CSS"],0],
+["What does a network switch connect?",["Devices in a local network","Database columns","Web pages","Keyboard keys"],0],
+["What is an IT incident?",["An unplanned service interruption","A planned color change","A product discount","A database field"],0],
+["Why prioritize support tickets?",["Handle urgent and high-impact issues first","Ignore users","Close all tickets instantly","Avoid documentation"],0],
+["What is social engineering?",["Manipulating people into unsafe actions","Cooling a CPU","A page layout","A backup format"],0],
+["What is least privilege?",["Give only necessary access","Give everyone admin rights","Share one account","Disable login"],0],
+["Which habit supports physical computer safety?",["Take breaks and maintain good posture","Never take breaks","Put drinks on keyboards","Use damaged cables"],0]
+],
+["Firmware","URL","Accessibility","Field","UPDATE","Normalization","B2C","DHCP","Incident","Least privilege"],
+["A database column describing an attribute","A rule limiting access to what is necessary","Software embedded in or associated with hardware","An address for an online resource","A service interruption","A business selling directly to consumers","A process reducing data duplication","Inclusive design for people with different abilities","A protocol assigning IP settings automatically","An SQL command modifying existing records"],
+["C","D","H","A","J","G","F","I","E","B"],
+["architect","virtualization","accessibility","field","normalization","consumer","DHCP","switch","incident","privilege"],
+["A software _____ plans the high-level solution structure.","_____ lets one physical computer host virtual machines.","Web _____ helps people with different abilities use a site.","A database _____ stores one attribute of a record.","Database _____ reduces unnecessary repeated data.","B2C means a business sells directly to a _____.","_____ automatically assigns IP settings to devices.","A network _____ connects devices inside a LAN.","An _____ is an unplanned interruption to a service.","Least _____ gives users only the access they need."],
+{title:"Designing Digital Services",paragraphs:["A software architect plans a digital service and developers build it. Virtualization allows several virtual machines to run on physical hardware. Firmware provides low-level control for some devices.","The website uses URLs to identify pages. Developers consider accessibility so people with different abilities can use it. The database stores information in fields and uses normalization to reduce duplication. SQL UPDATE changes existing records.","The company sells directly to consumers using a B2C model. DHCP assigns network settings and switches connect office devices. Support staff prioritize incidents. Security staff apply least privilege and train employees to recognize social engineering."]},
+[["A software architect plans a solution's structure.",true],["A URL identifies an online resource.",true],["Normalization aims to increase unnecessary duplication.",false],["DHCP can assign IP settings automatically.",true],["Least privilege gives every user administrator access.",false]],
+{title:"A Secure Customer Portal",paragraphs:["A retailer creates a customer portal for its B2C business. Each page has a URL. Developers check accessibility so customers can navigate with assistive technologies. The database stores details in fields and uses normalization to reduce repeated information.","When a customer changes an address, the application uses SQL UPDATE. DHCP assigns IP settings and switches connect office computers. Virtual machines host some portal services.","The help desk records incidents and prioritizes those affecting many customers. The security team follows least privilege and teaches employees how social engineering works."]},
+[["What business model does the retailer use?",["b2c"]],["What helps people using assistive technologies?",["accessibility"]],["Which SQL command changes an existing address?",["update"]],["What assigns IP settings?",["dhcp"]],["What security principle limits access to what is needed?",["least privilege","least"]]]
+),
+makeExam(
+[
+["Which skill helps explain technical issues to non-technical users?",["Clear communication","Unexplained jargon","Avoiding questions","Machine code only"],0],
+["What does a power supply do?",["Provides electricity to components","Stores website content","Runs SQL queries","Maps domain names"],0],
+["Which is an output device?",["Printer","Mouse","Scanner","Keyboard"],0],
+["What does an application program do?",["Performs tasks for users","Replaces all hardware","Assigns every IP","Removes dust"],0],
+["What is web hosting?",["Providing server resources for a website","Writing a password","Buying a keyboard","Installing a printer"],0],
+["What is a hyperlink?",["A link to another resource","A hard drive encryption key","Extra RAM","A backup device"],0],
+["Which database object retrieves selected data?",["Query","Monitor","Router","Power supply"],0],
+["What is a database relationship?",["An association between tables","Screen size","A page color","A cable type"],0],
+["Why use an inventory database?",["Track product quantities","Style pages","Assign shortcuts","Cool devices"],0],
+["What is an order confirmation?",["A message acknowledging an order","A security patch","A primary key","A warranty"],0],
+["Why offer several payment options?",["Give customers convenient ways to pay","Remove security","Avoid recording orders","Disable checkout"],0],
+["What is network topology?",["Arrangement of devices and connections","Password policy","Homepage","CPU type"],0],
+["What can extend wireless coverage?",["Wireless access point","Printer","Scanner","CPU cooler"],0],
+["What is ticket escalation?",["Passing a difficult issue to higher support","Deleting a ticket","Stopping work","Closing a network"],0],
+["Why use a knowledge base?",["Store reusable support solutions","Replace every technician","Remove accounts","Block updates"],0],
+["What is a vulnerability?",["A weakness that could be exploited","A backup","An encryption key","A product listing"],0],
+["What is ransomware?",["Malware that locks data and demands payment","A secure protocol","A network switch","A database report"],0],
+["Why control physical access to servers?",["Prevent unauthorized access to equipment","Improve page colors","Increase cart size","Speed typing"],0],
+["What does encryption help protect?",["Confidentiality of data","Monitor size","Number of pages","Keyboard speed"],0],
+["Which habit reduces eye strain?",["Take breaks and look away regularly","Use maximum brightness","Sit very close","Never blink"],0]
+],
+["Web hosting","Hyperlink","Query","Relationship","Topology","Access point","Escalation","Knowledge base","Vulnerability","Ransomware"],
+["A weakness that may be exploited","A collection of reusable support instructions","A service making a website available on a server","A link to another page or resource","A request to retrieve selected database information","The layout of network devices and connections","Malware that locks data and demands payment","Passing an issue to a higher support level","An association between database tables","A device providing wireless network access"],
+["C","D","E","I","F","J","H","B","A","G"],
+["power supply","application","hosting","inventory","confirmation","topology","escalation","knowledge base","vulnerability","ransomware"],
+["A computer's _____ provides electricity to its components.","An _____ program helps users perform tasks.","Website _____ makes a site available online.","An _____ database tracks product quantities.","An order _____ tells a customer an order was received.","Network _____ describes how devices are arranged.","Ticket _____ sends a difficult issue to higher support.","A _____ stores solutions for common problems.","A _____ is a weakness attackers may exploit.","_____ can lock files and demand payment."],
+{title:"Reliable IT Operations",paragraphs:["An organization depends on computer systems, websites and databases. A power supply provides electricity, while application programs help employees complete tasks. A hosted website uses server resources and hyperlinks to connect pages.","The business database includes inventory records and relationships between tables. Staff use queries to retrieve stock information and confirm orders. Network topology describes how office devices connect, and wireless access points provide Wi-Fi coverage.","The help desk uses a knowledge base to solve common problems. Difficult tickets may be escalated. Security teams identify vulnerabilities, restrict physical access to servers and prepare for ransomware. Encryption protects confidential data."]},
+[["A power supply provides electricity to computer components.",true],["Web hosting makes a website available using server resources.",true],["A knowledge base makes support solutions harder to reuse.",false],["A vulnerability is a weakness that may be exploited.",true],["Encryption makes confidential data public.",false]],
+{title:"Supporting an Online Retailer",paragraphs:["An online retailer hosts its website on a server. Hyperlinks help customers move between product pages, and the database stores inventory information. Staff run queries to check stock and use relationships between tables to connect products with orders.","The office network uses a star topology. Wireless access points provide Wi-Fi, while a network diagram helps technicians understand connections. The help desk keeps a knowledge base and escalates complex tickets to specialists.","The security team checks for vulnerabilities and restricts physical access to servers. It prepares backups in case ransomware affects company files. Encryption helps protect confidential customer information."]},
+[["Where is the retailer's website hosted?",["server"]],["What information does the database store?",["inventory"]],["Which network arrangement is mentioned?",["star topology","topology"]],["Where are common support solutions stored?",["knowledge base"]],["Name one measure protecting company information.",["backups","encryption"]]]
+)
+
+];if(ok)score++;review.push('<div class="review-item">True/False '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+(q[1]?'True':'False')+'.</div>');});
   e.reading.forEach((q,i)=>{const answer=$("read"+i).value.toLowerCase(),matched=q[1].filter(k=>answer.includes(k)).length,ok=matched===q[1].length;if(ok)score++;review.push('<div class="review-item">Đọc hiểu '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đủ từ khóa':'Chưa đủ từ khóa')+'</span>.<br><b>Đáp án tham khảo:</b> '+q[1].join("; ")+'.</div>');});
   $("score").textContent=score+"/50 ("+Math.round(score/50*100)+"%)";$("scoreMessage").textContent=score>=40?"Rất tốt!":score>=30?"Khá tốt. Hãy xem lại câu sai.":"Hãy ôn lại kiến thức và thử lại.";
   $("answerReview").innerHTML="<h3>Đáp án và nhận xét</h3>"+review.join("");$("result").classList.remove("hidden");$("result").scrollIntoView({behavior:"smooth"});
