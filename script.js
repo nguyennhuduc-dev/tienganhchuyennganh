@@ -45,7 +45,7 @@ makeExam(
 ["Which device displays visual output?",["Monitor","Mouse","Microphone","Scanner"],0],
 ["Which component stores files permanently?",["CPU cache only","SSD","RAM","Cooling fan"],1],
 ["What is the purpose of an operating system interface?",["Allow users to interact with the computer","Increase screen size","Print documents automatically","Connect a website domain"],0],
-["Which HTML element creates a hyperlink?",["<p>","<a>","<img>","<table>"],1],
+["Which HTML element creates a hyperlink?",["&lt;p&gt;","&lt;a&gt;","&lt;img&gt;","&lt;table&gt;"],1],
 ["What does responsive web design help a website do?",["Adapt to different screen sizes","Delete database records","Block all users","Replace a server"],0],
 ["What is a domain name?",["A human-readable website address","A type of RAM","A database row","A power cable"],0],
 ["Which one is a relational database management system?",["MySQL","CSS","Bluetooth","Windows Explorer"],0],
