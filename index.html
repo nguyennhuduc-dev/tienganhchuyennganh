@@ -3,103 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Đề thi thử tiếng Anh chuyên ngành Công nghệ thông tin, ôn tập 8 Unit với 50 câu hỏi và 5 dạng bài.">
-  <title>English for Information Technology - Đề thi thử 8 Unit</title>
+  <meta name="description" content="Luyện thi tiếng Anh chuyên ngành CNTT với 4 đề, mỗi đề 50 câu, bao quát 8 Unit.">
+  <title>English for Information Technology - Luyện thi 8 Unit</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <p class="eyebrow">CAO ĐẲNG CÔNG THƯƠNG TP.HCM · NGÀNH CNTT</p>
-      <h1>English for Information Technology</h1>
-      <p>Đề thi thử cuối kỳ · Ôn tập đầy đủ 8 Unit · 5 dạng bài</p>
-      <div class="meta">
-        <span>50 câu / bài tập</span>
-        <span>Thời gian gợi ý: 60 phút</span>
-        <span>Đề mô phỏng, không phải đề chính thức</span>
-      </div>
-    </div>
-  </header>
-
+  <header class="hero"><div class="container">
+    <p class="eyebrow">TIẾNG ANH CHUYÊN NGÀNH · CÔNG NGHỆ THÔNG TIN</p>
+    <h1>English for Information Technology</h1>
+    <p>Hệ thống đề thi thử · 8 Unit · 4 đề độc lập</p>
+    <div class="meta"><span>50 câu / đề</span><span>5 phần / đề</span><span>Đề mô phỏng ôn tập</span></div>
+  </div></header>
   <main class="container">
-    <section class="instructions card">
+    <section class="card instructions">
       <h2>📚 Phạm vi ôn tập – 8 Units</h2>
       <ol class="unit-list">
-        <li>Working in the IT Industry</li>
-        <li>Computer Systems</li>
-        <li>Websites</li>
-        <li>Databases</li>
-        <li>E-commerce</li>
-        <li>Network Systems</li>
-        <li>IT Support</li>
-        <li>IT Security and Safety</li>
+        <li>Working in the IT Industry</li><li>Computer Systems</li><li>Websites</li><li>Databases</li>
+        <li>E-commerce</li><li>Network Systems</li><li>IT Support</li><li>IT Security and Safety</li>
       </ol>
-      <h2>📝 Hướng dẫn làm bài</h2>
-      <ul>
-        <li>Đề gồm 5 phần với tổng cộng 50 câu hỏi.</li>
-        <li>Phần đọc hiểu yêu cầu trả lời bằng tiếng Anh; đáp án tham khảo được hiển thị sau khi nộp.</li>
-        <li>Chọn hoặc nhập câu trả lời cho tất cả các phần, sau đó bấm <b>Nộp bài và chấm điểm</b>.</li>
-        <li>Bạn có thể dùng nút <b>Làm lại</b> để xóa toàn bộ câu trả lời.</li>
-      </ul>
-      <div class="progress-wrap">
-        <div class="progress-label"><span>Tiến độ trả lời</span><strong id="progressText">0/50</strong></div>
-        <div class="progress"><div id="progressBar"></div></div>
-      </div>
+      <h2>📝 Chọn đề thi</h2>
+      <p class="hint">Mỗi đề có bộ câu hỏi và đoạn đọc riêng, cùng cấu trúc 50 câu. Chuyển đề sẽ bắt đầu một lượt làm bài mới.</p>
+      <label class="exam-picker-label" for="examSelect">Đề muốn làm</label>
+      <select id="examSelect" class="exam-select">
+        <option value="0">Đề 1 – Kiến thức tổng hợp</option>
+        <option value="1">Đề 2 – IT jobs, computer systems & websites</option>
+        <option value="2">Đề 3 – Databases, e-commerce & networks</option>
+        <option value="3">Đề 4 – IT support, security & tổng hợp</option>
+      </select>
+      <div class="progress-wrap"><div class="progress-label"><span>Tiến độ trả lời</span><strong id="progressText">0/50</strong></div><div class="progress"><div id="progressBar"></div></div></div>
     </section>
-
     <form id="examForm">
-      <section class="card section">
-        <div class="section-heading"><div><span class="part">PHẦN I</span><h2>Multiple Choice</h2></div><span class="count">20 câu</span></div>
-        <p class="hint">Chọn đáp án đúng A, B, C hoặc D. Câu hỏi bao quát cả 8 chủ đề.</p>
-        <div id="mcQuestions"></div>
-      </section>
-
-      <section class="card section">
-        <div class="section-heading"><div><span class="part">PHẦN II</span><h2>Matching</h2></div><span class="count">10 câu</span></div>
-        <p class="hint">Nối thuật ngữ ở cột A với định nghĩa phù hợp ở cột B. Chọn chữ cái tương ứng.</p>
-        <div class="matching-grid">
-          <div><h3>Cột A</h3><ol id="matchingTerms"></ol></div>
-          <div><h3>Cột B</h3><ol type="A" id="matchingDefs"></ol></div>
-        </div>
-        <div id="matchingInputs" class="matching-inputs"></div>
-      </section>
-
-      <section class="card section">
-        <div class="section-heading"><div><span class="part">PHẦN III</span><h2>Fill in the Blanks</h2></div><span class="count">10 câu</span></div>
-        <p class="hint">Chọn từ trong khung để điền vào chỗ trống. Mỗi từ dùng một lần.</p>
-        <div class="word-bank" id="wordBank"></div>
-        <div id="fillQuestions"></div>
-      </section>
-
-      <section class="card section">
-        <div class="section-heading"><div><span class="part">PHẦN IV</span><h2>Reading – True or False</h2></div><span class="count">5 câu</span></div>
-        <div id="tfPassage"></div>
-        <div id="tfQuestions"></div>
-      </section>
-
-      <section class="card section">
-        <div class="section-heading"><div><span class="part">PHẦN V</span><h2>Reading Comprehension</h2></div><span class="count">5 câu</span></div>
-        <div id="readingPassage"></div>
-        <div id="readingQuestions"></div>
-      </section>
-
-      <div class="submit-panel card">
-        <div><h2>Hoàn thành bài thi?</h2><p class="hint">Hệ thống chấm điểm 4 phần khách quan và đối chiếu từ khóa ở phần đọc hiểu. Hãy đọc đáp án tham khảo sau khi nộp bài.</p></div>
-        <div class="actions">
-          <button type="button" class="btn btn-secondary" id="resetBtn">Làm lại</button>
-          <button type="submit" class="btn btn-primary">Nộp bài và chấm điểm</button>
-        </div>
-      </div>
+      <section class="card section"><div class="section-heading"><div><span class="part">PHẦN I</span><h2>Multiple Choice</h2></div><span class="count">20 câu</span></div><p class="hint">Chọn đáp án đúng A, B, C hoặc D.</p><div id="mcQuestions"></div></section>
+      <section class="card section"><div class="section-heading"><div><span class="part">PHẦN II</span><h2>Matching</h2></div><span class="count">10 câu</span></div><p class="hint">Nối thuật ngữ ở cột A với định nghĩa phù hợp ở cột B.</p><div class="matching-grid"><div><h3>Cột A</h3><ol id="matchingTerms"></ol></div><div><h3>Cột B</h3><ol type="A" id="matchingDefs"></ol></div></div><div id="matchingInputs" class="matching-inputs"></div></section>
+      <section class="card section"><div class="section-heading"><div><span class="part">PHẦN III</span><h2>Fill in the Blanks</h2></div><span class="count">10 câu</span></div><p class="hint">Chọn từ trong khung để điền vào chỗ trống. Mỗi từ dùng một lần.</p><div class="word-bank" id="wordBank"></div><div id="fillQuestions"></div></section>
+      <section class="card section"><div class="section-heading"><div><span class="part">PHẦN IV</span><h2>Reading – True or False</h2></div><span class="count">5 câu</span></div><div id="tfPassage"></div><div id="tfQuestions"></div></section>
+      <section class="card section"><div class="section-heading"><div><span class="part">PHẦN V</span><h2>Reading Comprehension</h2></div><span class="count">5 câu</span></div><div id="readingPassage"></div><div id="readingQuestions"></div></section>
+      <div class="submit-panel card"><div><h2>Hoàn thành bài thi?</h2><p class="hint">Nộp bài để xem điểm, đáp án và phần cần ôn tập.</p></div><div class="actions"><button type="button" class="btn btn-secondary" id="resetBtn">Làm lại đề này</button><button type="submit" class="btn btn-primary">Nộp bài và chấm điểm</button></div></div>
     </form>
-
-    <section id="result" class="card result hidden" aria-live="polite">
-      <h2>Kết quả bài thi</h2>
-      <div class="score" id="score"></div>
-      <p id="scoreMessage"></p>
-      <div id="answerReview"></div>
-    </section>
-
-    <footer>Đề luyện tập tự biên soạn theo 8 chủ đề tiếng Anh chuyên ngành CNTT. Không đại diện cho đề thi chính thức của HITC.</footer>
+    <section id="result" class="card result hidden" aria-live="polite"><h2>Kết quả bài thi</h2><div class="score" id="score"></div><p id="scoreMessage"></p><div id="answerReview"></div></section>
+    <footer>Đề luyện tập tự biên soạn theo 8 chủ đề tiếng Anh chuyên ngành CNTT. Không phải đề thi chính thức.</footer>
   </main>
   <script src="script.js"></script>
 </body>
