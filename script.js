@@ -134,43 +134,7 @@ makeExam(
 [["IT support staff help users with technical problems.",true],["A support ticket can document a reported issue.",true],["Phishing messages are always safe to open.",false],["Multi-factor authentication adds a verification step.",true],["Ergonomics has no connection with computer use.",false]],
 {title:"Responding to a Security Incident",paragraphs:["An employee receives an email that appears to come from the company's IT department. It asks the employee to click a link and enter a password. The employee notices unusual spelling and reports the message to the help desk instead of opening the link.","The support technician creates a ticket and informs the security team. The team checks the email, blocks the dangerous website and reminds staff about phishing. They also review account access and require multi-factor authentication for important systems.","The company installs security updates, checks antivirus alerts and keeps backups of important files. Employees are encouraged to use unique passwords and report suspicious messages quickly."]},
 [["What did the suspicious email ask the employee to enter?",["password"]],["What did the employee do instead of clicking the link?",["reported the message"]],["What did the security team block?",["dangerous website","website"]],["What extra account protection did the company require?",["multi-factor authentication","mfa"]],["Name one other security measure mentioned.",["antivirus"]]]
-)
-];
-
-const $ = id => document.getElementById(id);
-const ABCD = ["A","B","C","D"];
-let current = 0;
-const letters = "ABCDEFGHIJ".split("");
-function passageHTML(p){return '<article class="reading-passage"><h3>'+p.title+'</h3>'+p.paragraphs.map(x=>'<p>'+x+'</p>').join("")+'</article>';}
-function render(){
-  const e=exams[current];
-  const examTitle = $("currentExamTitle");
-  if (examTitle) examTitle.textContent = "Bạn đang làm: Đề " + (current + 1);
-  $("mcQuestions").innerHTML=e.mc.map((q,i)=>'<div class="question"><div class="question-title">'+(i+1)+'. '+q[0]+'</div><div class="options">'+q[1].map((v,j)=>'<label class="option"><input type="radio" name="mc'+i+'" value="'+j+'"><span><b>'+ABCD[j]+'.</b> '+v+'</span></label>').join("")+'</div></div>').join("");
-  $("matchingTerms").innerHTML=e.terms.map(x=>'<li>'+x+'</li>').join("");
-  $("matchingDefs").innerHTML=e.defs.map(x=>'<li>'+x+'</li>').join("");
-  $("matchingInputs").innerHTML=e.terms.map((x,i)=>'<div class="match-row"><label for="match'+i+'">'+(i+1)+'. '+x+'</label><select id="match'+i+'"><option value="">Chọn</option>'+letters.map(a=>'<option>'+a+'</option>').join("")+'</select></div>').join("");
-  $("wordBank").textContent="Word bank: "+e.words.join(" · ");
-  $("fillQuestions").innerHTML=e.fills.map((s,i)=>'<div class="fill-row"><b>'+(i+1)+'.</b><div>'+s.replace("_____",'<select id="fill'+i+'"><option value="">Chọn từ</option>'+e.words.map(w=>'<option value="'+w+'">'+w+'</option>').join("")+'</select>')+'</div></div>').join("");
-  $("tfPassage").innerHTML=passageHTML(e.tfPassage);
-  $("tfQuestions").innerHTML=e.tf.map((q,i)=>'<div class="tf-row"><b>'+(i+1)+'. '+q[0]+'</b><div class="inline-options"><label><input type="radio" name="tf'+i+'" value="true"> True</label><label><input type="radio" name="tf'+i+'" value="false"> False</label></div></div>').join("");
-  $("readingPassage").innerHTML=passageHTML(e.readingPassage);
-  $("readingQuestions").innerHTML=e.reading.map((q,i)=>'<div class="question"><div class="question-title">'+(i+1)+'. '+q[0]+'</div><input class="answer-input" type="text" id="read'+i+'" placeholder="Write your answer in English"></div>').join("");
-  $("result").classList.add("hidden");$("examForm").reset();answeredCount();window.scrollTo({top:0,behavior:"smooth"});
-}
-function answeredCount(){
-  let n=0;for(let i=0;i<20;i++)if(document.querySelector('input[name="mc'+i+'"]:checked'))n++;
-  for(let i=0;i<10;i++){if($("match"+i)?.value)n++;if($("fill"+i)?.value)n++;}
-  for(let i=0;i<5;i++){if(document.querySelector('input[name="tf'+i+'"]:checked'))n++;if($("read"+i)?.value.trim())n++;}
-  $("progressText").textContent=n+"/50";$("progressBar").style.width=(n/50*100)+"%";
-}
-function grade(){
-  const e=exams[current];let score=0,review=[];
-  e.mc.forEach((q,i)=>{const a=document.querySelector('input[name="mc'+i+'"]:checked'),ok=!!a&&+a.value===q[2];if(ok)score++;review.push('<div class="review-item">'+(i+1)+'. Trắc nghiệm — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+ABCD[q[2]]+'. '+q[1][q[2]]+'</div>');});
-  e.terms.forEach((term,i)=>{const ok=$("match"+i).value===e.match[i];if(ok)score++;review.push('<div class="review-item">Nối '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+e.match[i]+'.</div>');});
-  e.words.forEach((word,i)=>{const ok=$("fill"+i).value===word;if(ok)score++;review.push('<div class="review-item">Điền từ '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+word+'.</div>');});
-  e.tf.forEach((q,i)=>{const a=document.querySelector('input[name="tf'+i+'"]:checked'),ok=!!a&&(a.value==="true")===q[1
-,
+),
 makeExam(
 [
 ["Who coordinates an IT project?",["Project manager","Technician","Customer","Browser"],0],
@@ -270,6 +234,42 @@ makeExam(
 {title:"Supporting an Online Retailer",paragraphs:["An online retailer hosts its website on a server. Hyperlinks help customers move between product pages, and the database stores inventory information. Staff run queries to check stock and use relationships between tables to connect products with orders.","The office network uses a star topology. Wireless access points provide Wi-Fi, while a network diagram helps technicians understand connections. The help desk keeps a knowledge base and escalates complex tickets to specialists.","The security team checks for vulnerabilities and restricts physical access to servers. It prepares backups in case ransomware affects company files. Encryption helps protect confidential customer information."]},
 [["Where is the retailer's website hosted?",["server"]],["What information does the database store?",["inventory"]],["Which network arrangement is mentioned?",["star topology","topology"]],["Where are common support solutions stored?",["knowledge base"]],["Name one measure protecting company information.",["backups","encryption"]]]
 )
+];
+
+const $ = id => document.getElementById(id);
+const ABCD = ["A","B","C","D"];
+let current = 0;
+const letters = "ABCDEFGHIJ".split("");
+function passageHTML(p){return '<article class="reading-passage"><h3>'+p.title+'</h3>'+p.paragraphs.map(x=>'<p>'+x+'</p>').join("")+'</article>';}
+function render(){
+  const e=exams[current];
+  const examTitle = $("currentExamTitle");
+  if (examTitle) examTitle.textContent = "Bạn đang làm: Đề " + (current + 1);
+  $("mcQuestions").innerHTML=e.mc.map((q,i)=>'<div class="question"><div class="question-title">'+(i+1)+'. '+q[0]+'</div><div class="options">'+q[1].map((v,j)=>'<label class="option"><input type="radio" name="mc'+i+'" value="'+j+'"><span><b>'+ABCD[j]+'.</b> '+v+'</span></label>').join("")+'</div></div>').join("");
+  $("matchingTerms").innerHTML=e.terms.map(x=>'<li>'+x+'</li>').join("");
+  $("matchingDefs").innerHTML=e.defs.map(x=>'<li>'+x+'</li>').join("");
+  $("matchingInputs").innerHTML=e.terms.map((x,i)=>'<div class="match-row"><label for="match'+i+'">'+(i+1)+'. '+x+'</label><select id="match'+i+'"><option value="">Chọn</option>'+letters.map(a=>'<option>'+a+'</option>').join("")+'</select></div>').join("");
+  $("wordBank").textContent="Word bank: "+e.words.join(" · ");
+  $("fillQuestions").innerHTML=e.fills.map((s,i)=>'<div class="fill-row"><b>'+(i+1)+'.</b><div>'+s.replace("_____",'<select id="fill'+i+'"><option value="">Chọn từ</option>'+e.words.map(w=>'<option value="'+w+'">'+w+'</option>').join("")+'</select>')+'</div></div>').join("");
+  $("tfPassage").innerHTML=passageHTML(e.tfPassage);
+  $("tfQuestions").innerHTML=e.tf.map((q,i)=>'<div class="tf-row"><b>'+(i+1)+'. '+q[0]+'</b><div class="inline-options"><label><input type="radio" name="tf'+i+'" value="true"> True</label><label><input type="radio" name="tf'+i+'" value="false"> False</label></div></div>').join("");
+  $("readingPassage").innerHTML=passageHTML(e.readingPassage);
+  $("readingQuestions").innerHTML=e.reading.map((q,i)=>'<div class="question"><div class="question-title">'+(i+1)+'. '+q[0]+'</div><input class="answer-input" type="text" id="read'+i+'" placeholder="Write your answer in English"></div>').join("");
+  $("result").classList.add("hidden");$("examForm").reset();answeredCount();window.scrollTo({top:0,behavior:"smooth"});
+}
+function answeredCount(){
+  let n=0;for(let i=0;i<20;i++)if(document.querySelector('input[name="mc'+i+'"]:checked'))n++;
+  for(let i=0;i<10;i++){if($("match"+i)?.value)n++;if($("fill"+i)?.value)n++;}
+  for(let i=0;i<5;i++){if(document.querySelector('input[name="tf'+i+'"]:checked'))n++;if($("read"+i)?.value.trim())n++;}
+  $("progressText").textContent=n+"/50";$("progressBar").style.width=(n/50*100)+"%";
+}
+function grade(){
+  const e=exams[current];let score=0,review=[];
+  e.mc.forEach((q,i)=>{const a=document.querySelector('input[name="mc'+i+'"]:checked'),ok=!!a&&+a.value===q[2];if(ok)score++;review.push('<div class="review-item">'+(i+1)+'. Trắc nghiệm — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+ABCD[q[2]]+'. '+q[1][q[2]]+'</div>');});
+  e.terms.forEach((term,i)=>{const ok=$("match"+i).value===e.match[i];if(ok)score++;review.push('<div class="review-item">Nối '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+e.match[i]+'.</div>');});
+  e.words.forEach((word,i)=>{const ok=$("fill"+i).value===word;if(ok)score++;review.push('<div class="review-item">Điền từ '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+word+'.</div>');});
+  e.tf.forEach((q,i)=>{const a=document.querySelector('input[name="tf'+i+'"]:checked'),ok=!!a&&(a.value==="true")===q[1
+
 
 ];if(ok)score++;review.push('<div class="review-item">True/False '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+(q[1]?'True':'False')+'.</div>');});
   e.reading.forEach((q,i)=>{const answer=$("read"+i).value.toLowerCase(),matched=q[1].filter(k=>answer.includes(k)).length,ok=matched===q[1].length;if(ok)score++;review.push('<div class="review-item">Đọc hiểu '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đủ từ khóa':'Chưa đủ từ khóa')+'</span>.<br><b>Đáp án tham khảo:</b> '+q[1].join("; ")+'.</div>');});
