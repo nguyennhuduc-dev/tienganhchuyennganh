@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English for Information Technology - Đề thi thử</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">CAO ĐẲNG CÔNG THƯƠNG TP.HCM · NGÀNH CNTT</p>
+      <h1>English for Information Technology</h1>
+      <p>Đề thi thử cuối kỳ · Ôn tập 8 Unit · 5 dạng bài</p>
+      <div class="meta">
+        <span>50 câu / bài tập</span><span>Thời gian gợi ý: 60 phút</span>
+        <span>Đề mô phỏng, không phải đề chính thức</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="instructions card">
+      <h2>Hướng dẫn làm bài</h2>
+      <ul>
+        <li>Hoàn thành 5 phần trước khi bấm <b>Nộp bài và chấm điểm</b>.</li>
+        <li>Phần đọc hiểu yêu cầu trả lời bằng tiếng Anh; đáp án tham khảo được hiển thị sau khi nộp.</li>
+        <li>Bạn có thể dùng nút <b>Làm lại</b> để xóa toàn bộ câu trả lời.</li>
+      </ul>
+      <div class="progress-wrap">
+        <div class="progress-label"><span>Tiến độ trả lời</span><strong id="progressText">0/50</strong></div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+    </section>
+
+    <form id="examForm">
+      <section class="card section">
+        <div class="section-heading"><div><span class="part">PHẦN I</span><h2>Multiple Choice</h2></div><span class="count">20 câu</span></div>
+        <p class="hint">Chọn đáp án đúng A, B, C hoặc D.</p>
+        <div id="mcQuestions"></div>
+      </section>
+
+      <section class="card section">
+        <div class="section-heading"><div><span class="part">PHẦN II</span><h2>Matching</h2></div><span class="count">10 câu</span></div>
+        <p class="hint">Nối thuật ngữ ở cột A với định nghĩa phù hợp ở cột B.</p>
+        <div class="matching-grid">
+          <div><h3>Cột A</h3><ol id="matchingTerms"></ol></div>
+          <div><h3>Cột B</h3><ol type="A" id="matchingDefs"></ol></div>
+        </div>
+        <div id="matchingInputs" class="matching-inputs"></div>
+      </section>
+
+      <section class="card section">
+        <div class="section-heading"><div><span class="part">PHẦN III</span><h2>Fill in the blanks</h2></div><span class="count">10 câu</span></div>
+        <p class="hint">Chọn từ trong khung để điền vào chỗ trống. Mỗi từ dùng một lần.</p>
+        <div class="word-bank" id="wordBank"></div>
+        <div id="fillQuestions"></div>
+      </section>
+
+      <section class="card section">
+        <div class="section-heading"><div><span class="part">PHẦN IV</span><h2>True or False</h2></div><span class="count">5 câu</span></div>
+        <article class="reading-passage">
+          <h3>Computer Systems</h3>
+          <p>A computer system consists of hardware and software. Hardware includes physical components such as the CPU, monitor, keyboard and mouse. Software includes programs and applications that tell the computer what to do. The operating system manages computer resources and allows users to interact with the computer.</p>
+        </article>
+        <div id="tfQuestions"></div>
+      </section>
+
+      <section class="card section">
+        <div class="section-heading"><div><span class="part">PHẦN V</span><h2>Reading Comprehension</h2></div><span class="count">5 câu</span></div>
+        <article class="reading-passage">
+          <h3>Network Systems</h3>
+          <p>A computer network is a group of computers and devices connected together to share information and resources. Networks can be classified into different types, such as LAN and WAN.</p>
+          <p>LAN stands for Local Area Network. It is commonly used in homes, schools and offices. WAN stands for Wide Area Network. It covers a larger geographical area and can connect computers in different cities or countries.</p>
+          <p>A router is an important network device. It forwards data between networks. Network security is also important because hackers and malware can damage computer systems. A firewall helps protect networks from unauthorized access.</p>
+        </article>
+        <div id="readingQuestions"></div>
+      </section>
+
+      <div class="submit-panel card">
+        <div><h2>Hoàn thành bài thi?</h2><p class="hint">Hệ thống sẽ chấm các câu trắc nghiệm, nối cột, điền từ và True/False.</p></div>
+        <div class="actions">
+          <button type="button" class="btn btn-secondary" id="resetBtn">Làm lại</button>
+          <button type="submit" class="btn btn-primary">Nộp bài và chấm điểm</button>
+        </div>
+      </div>
+    </form>
+
+    <section id="result" class="card result hidden" aria-live="polite">
+      <h2>Kết quả bài thi</h2>
+      <div class="score" id="score"></div>
+      <p id="scoreMessage"></p>
+      <div id="answerReview"></div>
+    </section>
+
+    <footer>Đề luyện tập tự biên soạn dựa trên 8 chủ đề người học cung cấp. Không đại diện cho đề thi chính thức của HITC.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
