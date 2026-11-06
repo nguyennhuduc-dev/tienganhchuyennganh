@@ -144,6 +144,8 @@ const letters = "ABCDEFGHIJ".split("");
 function passageHTML(p){return '<article class="reading-passage"><h3>'+p.title+'</h3>'+p.paragraphs.map(x=>'<p>'+x+'</p>').join("")+'</article>';}
 function render(){
   const e=exams[current];
+  const examTitle = $("currentExamTitle");
+  if (examTitle) examTitle.textContent = "Bạn đang làm: Đề " + (current + 1);
   $("mcQuestions").innerHTML=e.mc.map((q,i)=>'<div class="question"><div class="question-title">'+(i+1)+'. '+q[0]+'</div><div class="options">'+q[1].map((v,j)=>'<label class="option"><input type="radio" name="mc'+i+'" value="'+j+'"><span><b>'+ABCD[j]+'.</b> '+v+'</span></label>').join("")+'</div></div>').join("");
   $("matchingTerms").innerHTML=e.terms.map(x=>'<li>'+x+'</li>').join("");
   $("matchingDefs").innerHTML=e.defs.map(x=>'<li>'+x+'</li>').join("");
@@ -274,7 +276,7 @@ makeExam(
   $("score").textContent=score+"/50 ("+Math.round(score/50*100)+"%)";$("scoreMessage").textContent=score>=40?"Rất tốt!":score>=30?"Khá tốt. Hãy xem lại câu sai.":"Hãy ôn lại kiến thức và thử lại.";
   $("answerReview").innerHTML="<h3>Đáp án và nhận xét</h3>"+review.join("");$("result").classList.remove("hidden");$("result").scrollIntoView({behavior:"smooth"});
 }
-$("examSelect").addEventListener("change",e=>{current=Number(e.target.value);render();});
+window.changeExam = function(value){const index=Number(value);if(Number.isInteger(index)&&index>=0&&index<exams.length){current=index;render();}};
 $("examForm").addEventListener("submit",e=>{e.preventDefault();grade();});
 $("resetBtn").addEventListener("click",()=>{if(!confirm("Bạn có chắc muốn làm lại đề này?"))return;render();});
 document.addEventListener("change",answeredCount);document.addEventListener("input",answeredCount);
