@@ -1,81 +1,98 @@
-📘 English for IT & Specialized English
+# English for IT – Specialized English
 
 <p align="center">
   <strong>Learn • Practice • Improve</strong><br>
-  Bộ tài liệu và bài luyện tập tiếng Anh chuyên ngành dành cho người học Công nghệ thông tin.
-</p><p align="center">
-  <img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Subject-IT%20English-6f42c1?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Units-8-success?style=for-the-badge">
-</p>---
+  Website luyện tập tiếng Anh chuyên ngành Công nghệ thông tin.
+</p>
 
-✨ Giới thiệu
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="Language: English">
+  <img src="https://img.shields.io/badge/Subject-IT%20English-6f42c1?style=for-the-badge" alt="Subject: IT English">
+  <img src="https://img.shields.io/badge/Units-8-success?style=for-the-badge" alt="8 Units">
+  <img src="https://img.shields.io/badge/Questions-50-orange?style=for-the-badge" alt="50 questions">
+</p>
 
-English for IT & Specialized English là dự án hỗ trợ học tập tiếng Anh chuyên ngành, tập trung vào từ vựng, thuật ngữ và khả năng đọc hiểu các nội dung liên quan đến Công nghệ thông tin.
+---
 
-Dự án hướng đến việc hệ thống hóa kiến thức của 8 Unit và hỗ trợ người học ôn tập theo nhiều dạng câu hỏi thường gặp trong bài kiểm tra.
+## 📘 Giới thiệu
 
-🎯 Nội dung ôn tập
+**English for IT – Specialized English** là dự án website hỗ trợ học và ôn tập tiếng Anh chuyên ngành Công nghệ thông tin. Nội dung được xây dựng xoay quanh 8 Unit, kết hợp các dạng câu hỏi thường gặp để người học tự luyện tập và kiểm tra kiến thức.
 
-- 📚 Tổng hợp kiến thức và từ vựng theo từng Unit.
-- 🧠 Ôn tập thuật ngữ tiếng Anh chuyên ngành CNTT.
-- 📝 Luyện tập nhiều dạng bài kiểm tra.
-- 💡 Hỗ trợ tự học và củng cố kiến thức trước kỳ thi.
+🌐 **Truy cập website:** [https://nguyennhuduc-dev.github.io/tienganhchuyennganh/](https://nguyennhuduc-dev.github.io/tienganhchuyennganh/)
 
-🧩 Các dạng bài luyện tập
+## 📚 Phạm vi kiến thức – 8 Units
 
-Dạng bài| Nội dung
-Multiple Choice| Trắc nghiệm A, B, C, D
-Matching| Nối cột A với cột B
-Fill in the Blanks| Điền từ còn thiếu
-Reading| Đọc đoạn văn
-True / False| Xác định đúng hoặc sai
-Reading Comprehension| Đọc và trả lời câu hỏi
+1. **Working in the IT Industry** – Làm việc trong ngành Công nghệ thông tin.
+2. **Computer Systems** – Hệ thống máy tính.
+3. **Websites** – Trang web.
+4. **Databases** – Cơ sở dữ liệu.
+5. **E-commerce** – Thương mại điện tử.
+6. **Network Systems** – Hệ thống mạng.
+7. **IT Support** – Hỗ trợ kỹ thuật CNTT.
+8. **IT Security and Safety** – An ninh và an toàn CNTT.
 
-🖥️ Công nghệ sử dụng
+## 📝 Cấu trúc đề luyện tập
 
-- HTML5 – Xây dựng cấu trúc trang web.
-- CSS3 – Thiết kế giao diện.
-- JavaScript – Xử lý câu hỏi và tương tác.
+Bài luyện tập gồm **50 câu**, chia thành 5 phần:
 
-🚀 Cách sử dụng
+| Phần | Dạng bài | Số câu |
+|---|---|---:|
+| I | Trắc nghiệm A, B, C, D (Multiple Choice) | 20 |
+| II | Nối cột A với cột B (Matching) | 10 |
+| III | Điền từ (Fill in the Blanks) | 10 |
+| IV | Đọc đoạn văn và chọn True / False | 5 |
+| V | Đọc hiểu và trả lời câu hỏi (Reading Comprehension) | 5 |
+| **Tổng** | | **50** |
 
-1. Tải mã nguồn từ repository.
-2. Mở thư mục bằng Visual Studio Code.
-3. Mở file "index.html" bằng trình duyệt.
-4. Chọn nội dung muốn ôn tập và bắt đầu làm bài.
+## ✨ Tính năng
 
-Có thể sử dụng tiện ích Live Server để chạy trang web thuận tiện hơn.
+- Bao quát kiến thức và thuật ngữ của 8 Unit.
+- Hỗ trợ nhiều dạng câu hỏi trong cùng một bài luyện tập.
+- Hiển thị tiến độ làm bài.
+- Tự động chấm điểm sau khi nộp bài.
+- Hiển thị kết quả và phần xem lại đáp án.
+- Có chức năng làm lại bài để luyện tập nhiều lần.
+- Giao diện có thể sử dụng trên trình duyệt máy tính và điện thoại.
 
-📁 Cấu trúc dự án
+## 🛠️ Công nghệ sử dụng
 
+- **HTML5:** Xây dựng cấu trúc trang web.
+- **CSS3:** Thiết kế giao diện và bố cục.
+- **JavaScript:** Hiển thị câu hỏi, xử lý câu trả lời, tính điểm và tương tác.
+
+## 🚀 Chạy dự án trên máy tính
+
+1. Clone hoặc tải repository về máy.
+2. Mở thư mục dự án bằng Visual Studio Code hoặc trình soạn thảo bất kỳ.
+3. Mở file `index.html` bằng trình duyệt.
+4. Hoặc sử dụng tiện ích **Live Server** trong VS Code để chạy website.
+
+## 📁 Cấu trúc dự án
+
+```
 tienganhchuyennganh/
 ├── README.md
 ├── index.html
 ├── style.css
 └── script.js
+```
 
-📌 Định hướng phát triển
+## 🌐 Triển khai GitHub Pages
 
-- [ ] Hoàn thiện nội dung cả 8 Unit.
-- [ ] Bổ sung ngân hàng câu hỏi.
-- [ ] Xây dựng giao diện làm bài trực tuyến.
-- [ ] Tự động chấm điểm và hiển thị kết quả.
-- [ ] Bổ sung giải thích đáp án.
-- [ ] Tối ưu giao diện điện thoại và máy tính.
+Website được triển khai bằng GitHub Pages từ repository:
 
-🤝 Đóng góp
+[github.com/nguyennhuduc-dev/tienganhchuyennganh](https://github.com/nguyennhuduc-dev/tienganhchuyennganh)
 
-Mọi góp ý nhằm cải thiện nội dung và trải nghiệm học tập đều được hoan nghênh.
+## 🤝 Đóng góp
 
-Bạn có thể tạo Issue hoặc gửi Pull Request để đóng góp cho dự án.
+Nếu phát hiện lỗi hoặc có đề xuất cải thiện nội dung, bạn có thể tạo **Issue** hoặc gửi **Pull Request** trong repository.
 
-👨‍💻 Tác giả
+## 👨‍💻 Tác giả
 
-nguyennhuduc-dev
+**nguyennhuduc-dev**
 
-- GitHub: "@nguyennhuduc-dev" (https://github.com/nguyennhuduc-dev)
-- Repository: "tienganhchuyennganh" (https://github.com/nguyennhuduc-dev/tienganhchuyennganh)
+- GitHub: [@nguyennhuduc-dev](https://github.com/nguyennhuduc-dev)
+- Repository: [tienganhchuyennganh](https://github.com/nguyennhuduc-dev/tienganhchuyennganh)
 
 ---
 
