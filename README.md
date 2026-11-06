@@ -18,7 +18,7 @@
 
 Website hỗ trợ học và ôn tập tiếng Anh chuyên ngành Công nghệ thông tin. Dự án hiện có **4 đề thi thử độc lập**, mỗi đề gồm 50 câu hỏi được biên soạn theo các chủ đề trong 8 Unit.
 
-🌐 **Truy cập website:** [https://nguyennhuduc-dev.github.io/tienganhchuyennganh/](https://nguyennhuduc.github.io/tienganhchuyennganh/)
+🌐 **Truy cập website:** [https://nguyennhuduc-dev.github.io/tienganhchuyennganh/](https://nguyennhuduc-dev.github.io/tienganhchuyennganh/)
 
 ## 📚 Phạm vi kiến thức – 8 Units
 
