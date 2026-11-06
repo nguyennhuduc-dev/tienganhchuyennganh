@@ -268,10 +268,7 @@ function grade(){
   e.mc.forEach((q,i)=>{const a=document.querySelector('input[name="mc'+i+'"]:checked'),ok=!!a&&+a.value===q[2];if(ok)score++;review.push('<div class="review-item">'+(i+1)+'. Trắc nghiệm — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+ABCD[q[2]]+'. '+q[1][q[2]]+'</div>');});
   e.terms.forEach((term,i)=>{const ok=$("match"+i).value===e.match[i];if(ok)score++;review.push('<div class="review-item">Nối '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+e.match[i]+'.</div>');});
   e.words.forEach((word,i)=>{const ok=$("fill"+i).value===word;if(ok)score++;review.push('<div class="review-item">Điền từ '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+word+'.</div>');});
-  e.tf.forEach((q,i)=>{const a=document.querySelector('input[name="tf'+i+'"]:checked'),ok=!!a&&(a.value==="true")===q[1
-
-
-];if(ok)score++;review.push('<div class="review-item">True/False '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+(q[1]?'True':'False')+'.</div>');});
+  e.tf.forEach((q,i)=>{const a=document.querySelector('input[name="tf'+i+'"]:checked'),ok=!!a&&(a.value==="true")===q[1];if(ok)score++;review.push('<div class="review-item">True/False '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đúng':'Sai')+'</span>. Đáp án: '+(q[1]?'True':'False')+'.</div>');});
   e.reading.forEach((q,i)=>{const answer=$("read"+i).value.toLowerCase(),matched=q[1].filter(k=>answer.includes(k)).length,ok=matched===q[1].length;if(ok)score++;review.push('<div class="review-item">Đọc hiểu '+(i+1)+' — <span class="'+(ok?'correct':'incorrect')+'">'+(ok?'Đủ từ khóa':'Chưa đủ từ khóa')+'</span>.<br><b>Đáp án tham khảo:</b> '+q[1].join("; ")+'.</div>');});
   $("score").textContent=score+"/50 ("+Math.round(score/50*100)+"%)";$("scoreMessage").textContent=score>=40?"Rất tốt!":score>=30?"Khá tốt. Hãy xem lại câu sai.":"Hãy ôn lại kiến thức và thử lại.";
   $("answerReview").innerHTML="<h3>Đáp án và nhận xét</h3>"+review.join("");$("result").classList.remove("hidden");$("result").scrollIntoView({behavior:"smooth"});
